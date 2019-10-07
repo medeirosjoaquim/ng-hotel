@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import '@angular/material/prebuilt-themes/indigo-pink.css'; */
+@import './app/styles/_media';
+@import './app/styles/_colors';
+@import './app/styles/_typography';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.app {
+  &--logo {
+  }
+  &--menu-icon{
+    display: flex;
+    margin: 0 3rem;
+    font-size: 2.5rem;
+  }
+}
+
+// Angular Material overrides
+
+.mat-toolbar {
+  padding: 2.5rem !important;
+  background-color:$senior-green;
+  color: $senior-white;
+ }
+
+
