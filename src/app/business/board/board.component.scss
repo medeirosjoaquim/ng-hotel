@@ -1,0 +1,10 @@
+@import '../../../app/styles/_media';
+@import '../../../app/styles/_colors';
+@import '../../../app/styles/_typography';
+
+.board {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  min-height: 100vh;
+}
