@@ -1,0 +1,25 @@
+
+@import '../../../app/styles/_media';
+@import '../../../app/styles/_colors';
+@import '../../../app/styles/_typography';
+
+
+
+
+.checkin {
+  &--add-checkin {
+    margin: 1rem 0;
+    color: $senior-white;
+    width: 90%;
+    border: 1px solid $primary;
+    nav {
+      height: 2.5rem;
+    }
+  }
+}
+
+@include desktop {
+  .checkin {
+
+  }
+}

@@ -4,12 +4,10 @@ import { BoardComponent } from './board/board.component';
 import { CheckinComponent } from './checkin/checkin.component';
 import { ConsultasComponent } from './consultas/consultas.component';
 
-
-
 @NgModule({
   declarations: [BoardComponent, CheckinComponent, ConsultasComponent],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     BoardComponent

@@ -1,0 +1,15 @@
+@import '../styles/_media';
+@import '../styles/_colors';
+@import '../styles/_typography';
+
+
+.header {
+  padding: 2rem;
+  background-color: $senior-green;
+  color: $senior-white;
+  &--menu-icon{
+    display: flex;
+    margin: 0 3rem;
+    font-size: 2.5rem;
+  }
+}

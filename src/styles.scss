@@ -5,19 +5,3 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.app {
-  &--menu-icon{
-    display: flex;
-    margin: 0 3rem;
-    font-size: 2.5rem;
-  }
-}
-// Angular Material overrides
-
-.mat-toolbar {
-  padding: 2.5rem 4rem !important;
-  background-color:$senior-green;
-  color: $senior-white;
- }
-
-
