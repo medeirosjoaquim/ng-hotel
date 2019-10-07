@@ -3,15 +3,13 @@
 @import '../../../app/styles/_colors';
 @import '../../../app/styles/_typography';
 
-
-
-
 .checkin {
   &--add-checkin {
     margin: 1rem 0;
     color: $senior-white;
-    width: 90%;
-    border: 1px solid $primary;
+    width: 90vw;
+    height: 20rem;
+    border: 1px solid $blue;
     nav {
       height: 2.5rem;
     }
