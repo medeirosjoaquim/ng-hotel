@@ -1,4 +1,6 @@
 import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-pessoa-modal',
@@ -8,9 +10,16 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
 export class PessoaComponent implements AfterViewInit {
   private element: any;
   private modalWindow: any;
+  form: FormGroup;
 
-  constructor(private el: ElementRef) {
+  constructor(private el: ElementRef, private fb: FormBuilder) {
     this.element = el.nativeElement;
+
+    this.form = this.fb.group({
+      nome: ['', Validators.required],
+      documento: ['', Validators.required],
+      fone: ['', Validators.required]
+    });
 
   }
 
@@ -25,4 +34,7 @@ export class PessoaComponent implements AfterViewInit {
   close(): void {
     this.modalWindow[0].classList.remove('open');
   }
+  get _nome() { return this.form.get('nome'); }
+  get _domento() { return this.form.get('documento'); }
+  get _fone() { return this.form.get('fone'); }
 }

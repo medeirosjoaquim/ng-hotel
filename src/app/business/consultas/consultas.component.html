@@ -6,32 +6,18 @@
     <div class="consultas--results">
       <ng-container>
         <div class="row  header">
-          <div class="col-2">Nome</div>
-          <div class="col-3">Data entrada</div>
-          <div class="col-3">Data saida</div>
-          <div class="col-1">Diarias</div>
-          <div class="col-1">Veículo</div>
+          <div class="col-4">Nome</div>
+          <div class="col-3">Documento</div>
+          <div class="col-3">Valor gasto (R$)</div>
         </div>
       </ng-container>
       <ng-container *ngFor="let item of checkinList">
         <div class="row">
-          <div class="col-2">{{item.hospede.nome}}</div>
-          <div class="col-3">
-            <div class="row">
-              <div class="col-6">{{formatDate(item.dataEntrada)}}</div>
-              <div class="col-6">{{formatTime(item.dataEntrada)}}</div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="row">
-              <div class="col-6">{{formatDate(item.dataSaida)}}</div>
-              <div class="col-6">{{formatTime(item.dataSaida)}}</div>
-            </div>
-          </div>
-          <div class="col-1 text-center">{{diff(item.dataEntrada, item.dataSaida) }}</div>
-          <div class="col-1 text-center">
-            {{ (item.adicionalEstacionamento) ? 'Sim' : 'Não' }}
-          </div>
+          <div class="col-4">{{item.hospede.nome}}</div>
+          <div class="col-3">{{item.hospede.documento}}</div>
+          <div class="col-3 text-center">calculate</div>
+
+
         </div>
       </ng-container>
     </div>
