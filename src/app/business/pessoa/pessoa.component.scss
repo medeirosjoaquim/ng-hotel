@@ -3,6 +3,7 @@
 @import '../../../app/styles/_typography';
 
 .pessoa-modal {
+  display: none;
   overflow: hidden;
   height:0;
   min-height: 0;
@@ -38,3 +39,6 @@ nav {
   cursor: pointer;
 }
 
+.validator {
+  margin-top: 0.5rem;
+}

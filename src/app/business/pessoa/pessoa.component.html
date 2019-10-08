@@ -13,53 +13,61 @@
   <div class="pessoa-modal--form">
     <form [formGroup]="form">
       <div class="row">
-          <!-- Nome -->
-          <div class="form-group col-6 ">
-              <label
-                for="nome"
-                class="h6"
-              >Nome</label>
-              <input
-                formControlName="nome"
-                class="form-control first-input"
-              >
-              <div
-              *ngIf="_nome.touched &&_nome.invalid"
-              class="alert alert-danger validator"
-            >
-              <div *ngIf="_nome.hasError('required')">
-                Informe a data de entrada
-              </div>
+        <!-- Nome -->
+        <div class="form-group col-6 ">
+          <label
+            for="nome"
+            class="h6"
+          >Nome</label>
+          <input
+            formControlName="nome"
+            class="form-control first-input"
+          >
+          <div
+            *ngIf="_nome.touched && _nome.invalid"
+            class="alert alert-danger validator"
+          >
+            <div *ngIf="_nome.hasError('required')">
+              Informe o nome para cadastro
             </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- Documento -->
+        <div class="form-group col-6 ">
+          <label
+            for="nome"
+            class="h6"
+          >Documento</label>
+          <input
+            formControlName="documento"
+            class="form-control second-input"
+            maxlength="5"
+          >
+          <div
+            *ngIf="_documento.touched && _documento.invalid"
+            class="alert alert-danger validator"
+          >
+            <div *ngIf="_documento.hasError('required')">
+              Informe o documento para cadastro
             </div>
-
-            <!--  -->
-            <!-- Documento -->
-          <div class="form-group col-6 ">
-              <label
-                for="nome"
-                class="h6"
-              >Documento</label>
-              <input
-                formControlName="documento"
-                class="form-control second-input"
-              >
-            </div>
-            <!--  -->
+          </div>
+        </div>
+        <!--  -->
       </div>
       <div class="row">
-          <!-- Fone -->
-          <div class="form-group col-6">
-              <label
-                for="fone"
-                class="h6"
-              >Fone</label>
-              <input
-                formControlName="fone"
-                class="form-control last-input"
-              >
-            </div>
-            <!--  -->
+        <!-- Fone -->
+        <div class="form-group col-6">
+          <label
+            for="fone"
+            class="h6"
+          >Fone</label>
+          <input
+            formControlName="fone"
+            class="form-control last-input"
+          >
+        </div>
+        <!--  -->
       </div>
     </form>
   </div>

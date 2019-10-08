@@ -37,8 +37,12 @@
 .custom-checkbox {
   margin: 0;
   display: flex;
-
 }
+
+.validator {
+  margin-top: 0.5rem;
+}
+
 @include tablet {
 .checkin {
   &--add-checkin {
@@ -60,6 +64,4 @@
     }
   }
 }
-
-
 }
