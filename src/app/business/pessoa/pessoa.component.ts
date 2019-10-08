@@ -35,6 +35,6 @@ export class PessoaComponent implements AfterViewInit {
     this.modalWindow[0].classList.remove('open');
   }
   get _nome() { return this.form.get('nome'); }
-  get _domento() { return this.form.get('documento'); }
+  get _documento() { return this.form.get('documento'); }
   get _fone() { return this.form.get('fone'); }
 }

@@ -13,6 +13,9 @@
   left: 14rem;
   transition: height 0.5s linear;
   z-index: 1000;
+  &--form{
+    padding: 1rem;
+  }
 
 }
 

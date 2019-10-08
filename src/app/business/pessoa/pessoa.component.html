@@ -1,7 +1,43 @@
-<button class="btn btn-primary" (click)="open()">Incluir Pessoa</button>
+<button
+  class="btn btn-primary"
+  (click)="open()"
+>Incluir Pessoa</button>
 <div class="pessoa-modal">
   <nav class="navbar navbar-dark bg-primary">
     <span class="mb-0 h4">Cadastrar hóspede</span>
-    <span class="close-button" (click)="close()">[ fechar ]</span>
+    <span
+      class="close-button"
+      (click)="close()"
+    >[ fechar ]</span>
   </nav>
+  <div class="pessoa-modal--form">
+    <form [formGroup]="form">
+      <div class="row">
+          <!-- Nome -->
+          <div class="form-group col-6">
+              <label
+                for="nome"
+                class="h6"
+              >Nome</label>
+              <input
+                formControlName="nome"
+                class="form-control"
+              >
+            </div>
+            <!--  -->
+            <!-- Documento -->
+          <div class="form-group col-6">
+              <label
+                for="nome"
+                class="h6"
+              >Documento</label>
+              <input
+                formControlName="documento"
+                class="form-control"
+              >
+            </div>
+            <!--  -->
+      </div>
+    </form>
+  </div>
 </div>
