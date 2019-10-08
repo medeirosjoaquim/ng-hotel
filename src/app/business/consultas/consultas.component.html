@@ -6,21 +6,31 @@
     <div class="consultas--results">
       <ng-container>
         <div class="row  header">
-          <div class="col-2">Nome:</div>
-          <div class="col-2">Data entrada:</div>
-          <div class="col-2">Data saida:</div>
-          <div class="col-2">Total diarias:</div>
-          <div class="col-2">Possui veiculo</div>
+          <div class="col-2">Nome</div>
+          <div class="col-3">Data entrada</div>
+          <div class="col-3">Data saida</div>
+          <div class="col-1">Diarias</div>
+          <div class="col-1">Veículo</div>
         </div>
       </ng-container>
       <ng-container *ngFor="let item of checkinList">
         <div class="row">
           <div class="col-2">{{item.hospede.nome}}</div>
-          <div class="col-2">{{item.dataEntrada}}</div>
-          <div class="col-2">{{item.dataSaida}}</div>
-          <div class="col-2">{{diff(item.dataEntrada, item.dataSaida) }}</div>
-          <div class="col-2">
-            {{ (item.adicionalEstacionamento) ? 'Com carro' : 'Sem carro' }}
+          <div class="col-3">
+            <div class="row">
+              <div class="col-6">{{formatDate(item.dataEntrada)}}</div>
+              <div class="col-6">{{formatTime(item.dataEntrada)}}</div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row">
+              <div class="col-6">{{formatDate(item.dataSaida)}}</div>
+              <div class="col-6">{{formatTime(item.dataSaida)}}</div>
+            </div>
+          </div>
+          <div class="col-1 text-center">{{diff(item.dataEntrada, item.dataSaida) }}</div>
+          <div class="col-1 text-center">
+            {{ (item.adicionalEstacionamento) ? 'Sim' : 'Não' }}
           </div>
         </div>
       </ng-container>
