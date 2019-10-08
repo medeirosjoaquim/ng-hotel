@@ -12,7 +12,7 @@ export class ConsultasComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.currentMessage.subscribe(result => this.checkinList = result);
+    this.data.currentCheckin.subscribe(result => this.checkinList = result);
     console.log(this.checkinList);
   }
   addPessoa() {
