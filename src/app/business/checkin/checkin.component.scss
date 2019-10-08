@@ -5,9 +5,10 @@
 .checkin {
   &--add-checkin {
     margin: 1rem 0;
+    padding-bottom: 1rem;
     color: $senior-white;
     width: 90vw;
-    height: 20rem;
+    min-height: 22rem;
     border: 1px solid $blue;
     nav {
       height: 2.5rem;
@@ -44,7 +45,7 @@
     margin: 1rem 0;
     color: $senior-white;
     width: 90vw;
-    height: 20rem;
+    min-height: 20rem;
     border: 1px solid $blue;
     nav {
       height: 2.5rem;

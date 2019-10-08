@@ -5,34 +5,56 @@
       <span class="mb-0 h4">Novo checkin</span>
     </nav>
     <div class="checkin--form">
-      <form [formGroup]="form" (submit)="submitCheckin()">
+      <form
+        [formGroup]="form"
+        (submit)="submitCheckin()"
+      >
         <div class="row">
           <!-- Data/Hora Entrada -->
           <div class="form-group col-5">
             <label
-              for=""
+              for="dataEntrada"
               class="h6"
             >Data/hora de entrada</label>
             <input
               formControlName="dataEntrada"
-              [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1"
+              [owlDateTime]="dt1"
+              [owlDateTimeTrigger]="dt1"
               class="form-control"
-            ><owl-date-time #dt1></owl-date-time>
+            >
+            <owl-date-time #dt1></owl-date-time>
+            <div
+              *ngIf="_dataEntrada.touched &&_dataEntrada.invalid"
+              class="alert alert-danger validator"
+            >
+              <div *ngIf="_dataEntrada.hasError('required')">
+                Informe a data de entrada
+              </div>
+            </div>
           </div>
-
           <!--  -->
           <!-- Data/Hora Saída -->
           <div class="form-group col-5">
             <label
-              for=""
+              for="dataSaida"
               class="h6"
             >Data/hora de saída</label>
             <input
               formControlName="dataSaida"
-              [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2"
+              [owlDateTime]="dt2"
+              [owlDateTimeTrigger]="dt2"
               class="form-control"
               [min]="_dataEntrada.value"
-            ><owl-date-time #dt2></owl-date-time>
+            >
+            <owl-date-time #dt2></owl-date-time>
+            <div
+              *ngIf="_dataSaida.touched &&_dataSaida.invalid"
+              class="alert alert-danger validator"
+            >
+              <div *ngIf="_dataSaida.hasError('required')">
+                Informe a data de saída
+              </div>
+            </div>
           </div>
         </div>
         <!--  -->
@@ -40,7 +62,7 @@
           <!-- Pessoa -->
           <div class="form-group col-5">
             <label
-              for=""
+              for="pessoa"
               class="h6"
             >Hóspede</label>
             <select
@@ -57,6 +79,14 @@
               >
                 {{ pessoa.nome }}
               </option>
+              <div
+              *ngIf="_pessoaControlValue.touched &&_pessoaControlValue.invalid"
+              class="alert alert-danger validator"
+            >
+              <div *ngIf="_pessoaControlValue.hasError('required')">
+                Informe a data de saída
+              </div>
+            </div>
             </select>
           </div>
           <!--  -->
@@ -77,7 +107,11 @@
           </div>
           <!--  -->
         </div>
-        <button class="btn btn-primary col-1 btn-submit" type="submit" [disabled]="form.invalid">Salvar</button>
+        <button
+          class="btn btn-primary col-1 btn-submit"
+          type="submit"
+          [disabled]="form.invalid"
+        >Salvar</button>
       </form>
     </div>
   </div>
