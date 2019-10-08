@@ -1,10 +1,57 @@
 <div class="checkin">
   <button class="btn btn-primary">Incluir Pessoa</button>
   <div class="checkin--add-checkin">
-      <nav class="navbar navbar-dark bg-primary">
-          <span class="mb-0 h4">Novo checkin</span>
+    <nav class="navbar navbar-dark bg-primary">
+      <span class="mb-0 h4">Novo checkin</span>
+    </nav>
+    <div class="checkin--form">
+      <form [formGroup]="form">
+        <div class="row">
 
-      </nav>
+          <!-- Data/Hora Entrada -->
+          <div class="form-group col-5">
+            <label
+              for=""
+              class="h6"
+            >Data/hora de entrada</label>
+            <input
+              formControlName="dataEntrada"
+              type="text"
+              class="form-control"
+            >
+          </div>
+          <!--  -->
+          <!-- Data/Hora Saída -->
+          <div class="form-group col-5">
+            <label
+              for=""
+              class="h6"
+            >Data/hora de saída</label>
+            <input
+              formControlName="dataSaida"
+              type="text"
+              class="form-control"
+            >
+          </div>
+        </div>
+        <!--  -->
+        <div class="row">
+          <!-- Pessoa -->
+          <div class="form-group col-5">
+            <label
+              for=""
+              class="h6"
+            >Pessoa</label>
+            <input
+              formControlName="pessoa"
+              type="text"
+              class="form-control"
+            >
+          </div>
+          <!--  -->
+        </div>
+      </form>
+    </div>
   </div>
 
 </div>

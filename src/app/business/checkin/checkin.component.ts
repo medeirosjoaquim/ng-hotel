@@ -7,8 +7,15 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
   styleUrls: ['./checkin.component.scss']
 })
 export class CheckinComponent implements OnInit {
-
-  constructor() { }
+  form: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      dataEntrada: ['', Validators.required],
+      dataSaida: ['', Validators.required],
+      pessoa: ['', Validators.required],
+      possuiVeiculo: [false]
+    });
+  }
 
   ngOnInit() {
   }
