@@ -5,7 +5,7 @@
       <span class="mb-0 h4">Novo checkin</span>
     </nav>
     <div class="checkin--form">
-      <form [formGroup]="form">
+      <form [formGroup]="form" (submit)="submitCheckin()">
         <div class="row">
           <!-- Data/Hora Entrada -->
           <div class="form-group col-5">
@@ -31,7 +31,7 @@
               formControlName="dataSaida"
               [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2"
               class="form-control"
-              [min]="dataEntrada.value"
+              [min]="_dataEntrada.value"
             ><owl-date-time #dt2></owl-date-time>
           </div>
         </div>
@@ -77,7 +77,7 @@
           </div>
           <!--  -->
         </div>
-        <button class="btn btn-primary col-1 btn-submit">Salvar</button>
+        <button class="btn btn-primary col-1 btn-submit" type="submit" [disabled]="form.invalid">Salvar</button>
       </form>
     </div>
   </div>

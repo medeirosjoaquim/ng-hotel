@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { IPessoa } from '../models/IPessoa.model';
+import { ICheckin } from '../models/ICheckin.model';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -27,9 +28,19 @@ export class CheckinComponent implements OnInit {
   ngOnInit() {
   }
 
-  get dataEntrada() { return this.form.get('dataEntrada'); }
-  get dataSaida() { return this.form.get('dataSaida'); }
-  get pessoaControlValue() { return this.form.get('pessoa'); }
-  get possuiVeiculo() { return this.form.get('possuiVeiculo'); }
+  get _dataEntrada() { return this.form.get('dataEntrada'); }
+  get _dataSaida() { return this.form.get('dataSaida'); }
+  get _pessoaControlValue() { return this.form.get('pessoa'); }
+  get _possuiVeiculo() { return this.form.get('possuiVeiculo'); }
 
+  submitCheckin() {
+    console.log(this.form);
+    const persist: ICheckin = {
+      hospede: this._pessoaControlValue.value,
+      dataEntrada: this._dataEntrada.value,
+      dataSaida: this._dataSaida.value,
+      adicionalEstacionamento: this._possuiVeiculo.value
+    };
+    console.log(persist);
+  }
 }
