@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { BusinessService } from '../business.service';
+import data from '../../../shared/checkin.mock.json';
 import { ICheckin } from '../models/ICheckin.model';
 @Component({
   selector: 'app-board',
@@ -9,14 +9,12 @@ import { ICheckin } from '../models/ICheckin.model';
 export class BoardComponent implements OnInit {
   @Output() checkinResults = new EventEmitter<ICheckin[]>();
 
-  constructor(private bs: BusinessService) {
+  constructor() {
 
   }
 
   ngOnInit() {
-    if (this.bs.checkins !== undefined) {
-      console.log(this.bs.checkins);
-    }
+    console.log(data);
   }
 
 }
