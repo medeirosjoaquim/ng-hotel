@@ -42,7 +42,7 @@
           <input
             formControlName="documento"
             class="form-control second-input"
-            maxlength="5"
+            mask="00-000-0000"
           >
           <div
             *ngIf="_documento.touched && _documento.invalid"
@@ -65,7 +65,17 @@
           <input
             formControlName="fone"
             class="form-control last-input"
+            mask="000-000-0000"
+
           >
+          <div
+            *ngIf="_fone.touched && _fone.invalid"
+            class="alert alert-danger validator"
+          >
+            <div *ngIf="_fone.hasError('required')">
+              Informe o telefone para cadastro
+            </div>
+          </div>
         </div>
         <!--  -->
       </div>

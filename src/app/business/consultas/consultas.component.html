@@ -7,14 +7,14 @@
       <ng-container>
         <div class="row  header">
           <div class="col-4">Nome</div>
-          <div class="col-3">Documento</div>
-          <div class="col-3">Valor gasto (R$)</div>
+          <div class="col-2">Documento</div>
+          <div class="col-3 text-center">Valor gasto (R$)</div>
         </div>
       </ng-container>
       <ng-container *ngFor="let item of checkinList">
         <div class="row">
-          <div class="col-4">{{item.hospede.nome}}</div>
-          <div class="col-3">{{item.hospede.documento}}</div>
+          <div class="col-5">{{item.hospede.nome}}</div>
+          <div class="col-5">{{item.hospede.documento}}</div>
           <div class="col-3 text-center">calculate</div>
 
 

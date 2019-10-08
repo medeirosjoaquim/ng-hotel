@@ -22,9 +22,10 @@
 }
 
 .pessoa-modal.open {
-  display: initial;
-  width: 41rem;
-  min-height: 19rem;
+  display: flex;
+  flex-direction: column;
+  width: 42rem;
+  min-height: 22.5rem;
   border: 3px solid black;
   box-shadow: 1rem 1rem grey;
 }

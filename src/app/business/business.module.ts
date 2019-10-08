@@ -6,13 +6,14 @@ import { ConsultasComponent } from './consultas/consultas.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PessoaComponent } from './pessoa/pessoa.component';
+import { NgxMaskModule } from 'ngx-mask';
+
 import {
   OwlDateTimeModule,
   OwlNativeDateTimeModule,
   OWL_DATE_TIME_LOCALE
 } from 'ng-pick-datetime';
 import { NoopAnimationsModule} from '@angular/platform-browser/animations';
-
 
 @NgModule({
   declarations: [BoardComponent, CheckinComponent, ConsultasComponent, PessoaComponent],
@@ -22,7 +23,9 @@ import { NoopAnimationsModule} from '@angular/platform-browser/animations';
     HttpClientModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    NgxMaskModule.forRoot()
+
   ],
   exports: [
     BoardComponent
