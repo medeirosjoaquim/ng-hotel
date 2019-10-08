@@ -9,18 +9,21 @@
   width: 0;
   background-color: aliceblue;
   position: fixed;
-  top: 12rem;
-  left: 12rem;
-  transition: all 0.25s linear;
+  top: 10rem;
+  left: 14rem;
+  transition: height 0.5s linear;
   z-index: 1000;
+
 }
 
 .pessoa-modal.open {
   display: initial;
-  width: 35rem;
+  width: 41rem;
   height: 20rem;
-  border: 2px solid black;
+  border: 3px solid black;
+  box-shadow: 1rem 1rem grey;
 }
+
 nav {
   color: $senior-white;
 }
