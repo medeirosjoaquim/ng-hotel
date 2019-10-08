@@ -1,27 +1,40 @@
-# HotelSenior
+# Hotel Senior
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
-## Development server
+<p align="center">
+  <a href="#o-que-e">O que é</a> •
+  <a href="#instalacao">Instalação</a> •
+  <a href="#rodar">Rodar</a> •
+  <a href="#to-do">To do</a> •
+  <a href="#contact">Contato</a> •
+</p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## O que é
 
-## Code scaffolding
+* Aplicativo que simula um sistema de checkin para hotéis. Feito
+como desafio para vaga de Frontend na Sênior Sistemas em Outubro de 2019.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalação
+* Você deve ter, pelo menos, a versão 10.9 do <a href="https://nodejs.org/en/">Nodejs</a>
+* Para evitar conflitos, é aconselhável instalar a ferramenta ng-cli.
 
-## Build
+```npm install -g @angular/cli```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* Clonar o repositório. Entrar na pasta e instalar o pacotes com
 
-## Running unit tests
+```npm i```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Rodar
 
-## Running end-to-end tests
+```npm start``` ou ```ng start```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## To do
 
-## Further help
+* Write tests
+* Setup Travis CI
+* Deploy to Heroku
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contato
+
+Mande um e-mail! johnboxcodes@gmail.com! Ou diga oi no Linkedin:
+linkedin.com/in/joaquim-medeiros/
