@@ -2,7 +2,7 @@ import { IPessoa } from './IPessoa.model';
 
 export interface ICheckin {
   hospede: IPessoa;
-  dataEntrada: Date;
-  dataSaida: Date;
+  dataEntrada: string;
+  dataSaida: string;
   adicionalEstacionamento: boolean;
 }
