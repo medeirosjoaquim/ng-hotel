@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
-
+import { ICheckin } from './models/ICheckin.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,13 +12,16 @@ export class BusinessService {
 
   checkinsUrl = environment.checkinsUrl;
   pessoasUrl = environment.pessoaUrl;
-  constructor(private http: HttpClient) { }
+  checkins: ICheckin;
+  constructor(private http: HttpClient) {
+    this.getCheckins().subscribe();
+  }
 
   getCheckins(): Observable<any> {
     return this.http.get<any>
       (this.checkinsUrl)
       .pipe(
-        tap (console.log),
+        map ( result => this.checkins = result),
         catchError(this.handleError)
       );
   }
