@@ -7,7 +7,6 @@
     <div class="checkin--form">
       <form [formGroup]="form">
         <div class="row">
-
           <!-- Data/Hora Entrada -->
           <div class="form-group col-5">
             <label
@@ -49,6 +48,16 @@
             >
           </div>
           <!--  -->
+          <!-- Possui Veículo? -->
+          <div class="form-group col-5 hasVehicle">
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="_possuiVeiculo"
+              formControlName="possuiVeiculo"
+              >
+              <label class="custom-control-label h6" for="_possuiVeiculo">Possui veículo?</label>
+            </div>
+          </div>
+            <!--  -->
         </div>
       </form>
     </div>

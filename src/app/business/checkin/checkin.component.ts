@@ -20,4 +20,9 @@ export class CheckinComponent implements OnInit {
   ngOnInit() {
   }
 
+  get dataEntrada() { return this.form.get('dataEntrada'); }
+  get dataSaida() { return this.form.get('dataSaida'); }
+  get pessoa() { return this.form.get('pessoa'); }
+  get possuiVeiculo() { return this.form.get('possuiVeiculo'); }
+
 }

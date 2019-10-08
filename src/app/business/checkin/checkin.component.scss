@@ -28,6 +28,14 @@
 .row {
   margin: 1rem 0;
 }
+.hasVehicle {
+  padding-top: 2rem;
+}
+.custom-checkbox {
+  margin: 0;
+  display: flex;
+
+}
 @include tablet {
 .checkin {
   &--add-checkin {
