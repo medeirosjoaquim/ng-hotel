@@ -3,7 +3,7 @@
 
 <p align="center">
   <a href="#o-que-é">O que é</a> •
-  <a href="#instação">Instalação</a> •
+  <a href="#instalação">Instalação</a> •
   <a href="#rodar">Rodar</a> •
   <a href="#to-do">To do</a> •
   <a href="#contact">Contato</a> •
