@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BusinessService } from '../business.service';
 
 @Component({
   selector: 'app-board',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bs: BusinessService) { }
 
   ngOnInit() {
+    this.bs.getCheckins().subscribe();
   }
 
 }
