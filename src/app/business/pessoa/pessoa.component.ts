@@ -43,6 +43,7 @@ export class PessoaComponent implements AfterViewInit {
   }
 
   close(): void {
+    this.form.reset();
     this.modalWindow[0].classList.remove('open');
   }
   get _nome() { return this.form.get('nome'); }

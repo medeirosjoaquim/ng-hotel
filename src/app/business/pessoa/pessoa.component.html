@@ -66,7 +66,6 @@
             formControlName="fone"
             class="form-control last-input"
             mask="000-000-0000"
-
           >
           <div
             *ngIf="_fone.touched && _fone.invalid"
@@ -79,6 +78,11 @@
         </div>
         <!--  -->
       </div>
+        <button
+          class="btn btn-primary btn-submit"
+          type="submit"
+          [disabled]="form.invalid"
+        >Cadastrar</button>
     </form>
   </div>
 </div>
