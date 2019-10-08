@@ -40,24 +40,40 @@
             <label
               for=""
               class="h6"
-            >Pessoa</label>
-            <input
+            >Hóspede</label>
+            <select
               formControlName="pessoa"
-              type="text"
-              class="form-control"
+              class="custom-select form-control"
             >
+              <option
+                [ngValue]="null"
+                selected
+              >Selecionar hóspede</option>
+              <option
+                *ngFor="let pessoa of pessoas"
+                [ngValue]="pessoa"
+              >
+                {{ pessoa.nome }}
+              </option>
+            </select>
           </div>
           <!--  -->
           <!-- Possui Veículo? -->
           <div class="form-group col-5 hasVehicle">
-          <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="_possuiVeiculo"
-              formControlName="possuiVeiculo"
+            <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="_possuiVeiculo"
+                formControlName="possuiVeiculo"
               >
-              <label class="custom-control-label h6" for="_possuiVeiculo">Possui veículo?</label>
+              <label
+                class="custom-control-label h6"
+                for="_possuiVeiculo"
+              >Possui veículo?</label>
             </div>
           </div>
-            <!--  -->
+          <!--  -->
         </div>
         <button class="btn btn-primary col-1 btn-submit">Salvar</button>
       </form>

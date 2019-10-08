@@ -5,26 +5,26 @@
       "documento": "98-239-4590",
       "fone": "915-981-6169"
     },
-    "dataEntrada": "2018-11-01T07:28:17Z",
-    "dataSaida": "2018-10-11T04:54:27Z",
+    "dataEntrada": "2018-10-11T04:54:27Z",
+    "dataSaida": "2018-11-01T07:28:17Z",
     "adicionalEstacionamento": false
   },
   {
     "hospede": {"nome":"Lucina Becket","documento":"61-353-2600","fone":"905-508-4028"},
-    "dataEntrada": "2019-07-19T08:51:34Z",
-    "dataSaida": "2019-07-04T07:42:41Z",
+    "dataEntrada": "2019-07-04T07:42:41Z",
+    "dataSaida": "2019-07-19T08:51:34Z",
     "adicionalEstacionamento": true
   },
   {
     "hospede": {"nome":"Audrye Eppson","documento":"93-781-8448","fone":"570-228-5377"},
-    "dataEntrada": "2019-08-23T10:24:41Z",
-    "dataSaida": "2019-02-11T06:08:23Z",
+    "dataEntrada": "2019-02-11T06:08:23Z",
+    "dataSaida": "2019-02-23T10:24:41Z",
     "adicionalEstacionamento": false
   },
   {
     "hospede": {"nome":"Amelia Pierson","documento":"46-744-0080","fone":"955-902-5979"},
-    "dataEntrada": "2019-02-22T16:28:49Z",
-    "dataSaida": "2019-07-30T08:04:33Z",
+    "dataEntrada": "2019-03-27T16:28:49Z",
+    "dataSaida": "2019-03-30T08:04:33Z",
     "adicionalEstacionamento": true
   },
   {
@@ -35,8 +35,8 @@
   },
   {
     "hospede": {"nome":"Emery Lionel","documento":"70-103-0580","fone":"719-259-1920"},
-    "dataEntrada": "2019-06-20T23:17:01Z",
-    "dataSaida": "2018-12-04T22:36:11Z",
+    "dataEntrada": "2018-12-04T22:36:11Z",
+    "dataSaida": "2019-01-20T23:17:01Z",
     "adicionalEstacionamento": true
   }
 ]

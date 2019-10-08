@@ -3,24 +3,27 @@
     <nav class="navbar navbar-dark bg-primary">
       <span class="mb-0 h4">Consultas</span>
     </nav>
-    <ng-container>
-      <div class="row">
-        <div class="col-2">nome:</div>
-        <div class="col-2">data entrada:</div>
-        <div class="col-2">data saida:</div>
-        <div class="col-2">Total diarias:</div>
-        <div class="col-2">Possui veiculo</div>
-      </div>
-    </ng-container>
-    <ng-container *ngFor="let item of checkinList">
-      <div class="row">
-        <div class="col-2">{{item.hospede.nome}}</div>
-        <div class="col-2">{{item.dataEntrada}}</div>
-        <div class="col-2">{{item.dataSaida}}</div>
-        <div class="col-2">{{diff(item.dataEntrada, item.dataSaida) }}</div>
-        <div class="col-2">{{ (item.adicionalEstacionamento) ? 'Com carro' : 'Sem carro' }}</div>
-      </div>
-    </ng-container>
+    <div class="consultas--results">
+      <ng-container>
+        <div class="row  header">
+          <div class="col-2">Nome:</div>
+          <div class="col-2">Data entrada:</div>
+          <div class="col-2">Data saida:</div>
+          <div class="col-2">Total diarias:</div>
+          <div class="col-2">Possui veiculo</div>
+        </div>
+      </ng-container>
+      <ng-container *ngFor="let item of checkinList">
+        <div class="row">
+          <div class="col-2">{{item.hospede.nome}}</div>
+          <div class="col-2">{{item.dataEntrada}}</div>
+          <div class="col-2">{{item.dataSaida}}</div>
+          <div class="col-2">{{diff(item.dataEntrada, item.dataSaida) }}</div>
+          <div class="col-2">
+            {{ (item.adicionalEstacionamento) ? 'Com carro' : 'Sem carro' }}
+          </div>
+        </div>
+      </ng-container>
+    </div>
   </div>
-  <button class="btn btn-primary" (click)="addPessoa()">adicionar</button>
 </div>

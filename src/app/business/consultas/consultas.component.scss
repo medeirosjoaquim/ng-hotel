@@ -15,6 +15,13 @@
       height: 2.5rem;
     }
   }
+  &--results {
+    padding: 1rem;
+    .header {
+      background-color: $senior-green;
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
 @include desktop {
