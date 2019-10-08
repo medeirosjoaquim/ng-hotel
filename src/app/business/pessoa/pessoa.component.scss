@@ -1,0 +1,33 @@
+@import '../../../app/styles/_media';
+@import '../../../app/styles/_colors';
+@import '../../../app/styles/_typography';
+
+.pessoa-modal {
+  overflow: hidden;
+  height: 0;
+  border: 0;
+  width: 0;
+  background-color: aliceblue;
+  position: fixed;
+  top: 12rem;
+  left: 12rem;
+  transition: all 0.25s linear;
+  z-index: 1000;
+}
+
+.pessoa-modal.open {
+  display: initial;
+  width: 35rem;
+  height: 20rem;
+  border: 2px solid black;
+}
+nav {
+  color: $senior-white;
+}
+.close-button{
+  color: $senior-white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
