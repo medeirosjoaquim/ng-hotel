@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { ICheckin } from '../models/ICheckin.model';
+import moment from 'moment';
 
 @Component({
   selector: 'app-consultas',
@@ -25,4 +26,12 @@ export class ConsultasComponent implements OnInit {
       },
     );
   }
+
+  diff(dateStart, dateEnd) {
+    const start = moment(dateStart);
+    const end = moment(dateEnd);
+    const diff = end.diff(start, 'days');
+    return diff;
+  }
+
 }

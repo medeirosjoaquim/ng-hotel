@@ -8,6 +8,7 @@
         <div class="col-2">nome:</div>
         <div class="col-2">data entrada:</div>
         <div class="col-2">data saida:</div>
+        <div class="col-2">Total diarias:</div>
         <div class="col-2">Possui veiculo</div>
       </div>
     </ng-container>
@@ -16,6 +17,7 @@
         <div class="col-2">{{item.hospede.nome}}</div>
         <div class="col-2">{{item.dataEntrada}}</div>
         <div class="col-2">{{item.dataSaida}}</div>
+        <div class="col-2">{{diff(item.dataEntrada, item.dataSaida) }}</div>
         <div class="col-2">{{ (item.adicionalEstacionamento) ? 'Com carro' : 'Sem carro' }}</div>
       </div>
     </ng-container>
