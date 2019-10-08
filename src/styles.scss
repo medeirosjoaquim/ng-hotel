@@ -1,6 +1,7 @@
 @import './app/styles/_media';
 @import './app/styles/_colors';
 @import './app/styles/_typography';
+@import '../node_modules/ng-pick-datetime/assets/style/picker.min';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

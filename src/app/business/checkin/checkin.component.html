@@ -15,10 +15,11 @@
             >Data/hora de entrada</label>
             <input
               formControlName="dataEntrada"
-              type="datetime-local"
+              [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1"
               class="form-control"
-            >
+            ><owl-date-time #dt1></owl-date-time>
           </div>
+
           <!--  -->
           <!-- Data/Hora Saída -->
           <div class="form-group col-5">
@@ -28,9 +29,10 @@
             >Data/hora de saída</label>
             <input
               formControlName="dataSaida"
-              type="text"
+              [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2"
               class="form-control"
-            >
+              [min]="dataEntrada.value"
+            ><owl-date-time #dt2></owl-date-time>
           </div>
         </div>
         <!--  -->
