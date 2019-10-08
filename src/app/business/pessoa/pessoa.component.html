@@ -14,7 +14,7 @@
     <form [formGroup]="form">
       <div class="row">
           <!-- Nome -->
-          <div class="form-group col-6">
+          <div class="form-group col-6 pessoa-nome">
               <label
                 for="nome"
                 class="h6"
@@ -26,13 +26,27 @@
             </div>
             <!--  -->
             <!-- Documento -->
-          <div class="form-group col-6">
+          <div class="form-group col-6 pessoa-documento">
               <label
                 for="nome"
                 class="h6"
               >Documento</label>
               <input
                 formControlName="documento"
+                class="form-control"
+              >
+            </div>
+            <!--  -->
+      </div>
+      <div class="row">
+          <!-- Fone -->
+          <div class="form-group col-6 pessoa-fone">
+              <label
+                for="fone"
+                class="h6"
+              >Fone</label>
+              <input
+                formControlName="Fone"
                 class="form-control"
               >
             </div>
