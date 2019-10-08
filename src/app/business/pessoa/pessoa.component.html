@@ -23,7 +23,16 @@
                 formControlName="nome"
                 class="form-control first-input"
               >
+              <div
+              *ngIf="_nome.touched &&_nome.invalid"
+              class="alert alert-danger validator"
+            >
+              <div *ngIf="_nome.hasError('required')">
+                Informe a data de entrada
+              </div>
             </div>
+            </div>
+
             <!--  -->
             <!-- Documento -->
           <div class="form-group col-6 ">

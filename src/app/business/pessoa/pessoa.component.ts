@@ -1,6 +1,7 @@
 import { Component, ElementRef, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-
+import { DataService } from 'src/app/data.service';
+import { IPessoa } from '../models/IPessoa.model';
 
 @Component({
   selector: 'app-pessoa-modal',
@@ -47,4 +48,8 @@ export class PessoaComponent implements AfterViewInit {
   get _nome() { return this.form.get('nome'); }
   get _documento() { return this.form.get('documento'); }
   get _fone() { return this.form.get('fone'); }
+
+  submitPessoaForm() {
+    //
+  }
 }
