@@ -1,0 +1,12 @@
+# safelist
+branches:
+  only:
+  - prod
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - ng build --aot --prod
