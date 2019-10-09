@@ -3,7 +3,6 @@
 @import '../../../app/styles/_typography';
 
 .pessoa-modal {
-  display: none;
   overflow: hidden;
   min-height: 0;
   border: 0;
@@ -12,7 +11,7 @@
   position: fixed;
   top: 10rem;
   left: 14rem;
-  transition: min-height 0.5s linear;
+  transition: all 0.25s linear;
   z-index: 1000;
   &--form{
     padding: 1rem;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 import { IPessoa } from '../models/IPessoa.model';
 import { ICheckin } from '../models/ICheckin.model';
@@ -13,7 +13,8 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 export class CheckinComponent implements OnInit {
   form: FormGroup;
   pessoas: IPessoa[];
-  constructor(private fb: FormBuilder, private data: DataService) {
+  firstInput: any;
+  constructor(private fb: FormBuilder, private data: DataService, private el: ElementRef, ) {
     this.form = this.fb.group({
       dataEntrada: ['', Validators.required],
       dataSaida: ['', Validators.required],
@@ -25,6 +26,9 @@ export class CheckinComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.firstInput = this.el.nativeElement.getElementsByClassName('data-entrada');
+    this.firstInput[0].focus();
+
   }
 
   get _dataEntrada() { return this.form.get('dataEntrada'); }
