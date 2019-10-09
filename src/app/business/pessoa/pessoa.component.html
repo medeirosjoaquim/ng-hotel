@@ -70,7 +70,7 @@
           <input
             formControlName="fone"
             class="form-control last-input"
-            mask="000-000-0000" [validation]="false"
+            mask="000-000-0000"
           >
           <div
             *ngIf="_fone.touched && _fone.invalid"
@@ -79,7 +79,7 @@
             <div *ngIf="_fone.hasError('required')">
               Informe o telefone para cadastro
             </div>
-            <div *ngIf="_documento.hasError('Mask error')">
+            <div *ngIf="_fone.hasError('Mask error')">
               Preencha todos os caracteres
             </div>
           </div>
@@ -92,6 +92,5 @@
           [disabled]="form.invalid"
         >Cadastrar</button>
     </form>
-    <button (click)="logs()">debug</button>
   </div>
 </div>

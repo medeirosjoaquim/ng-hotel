@@ -64,8 +64,4 @@ export class PessoaComponent implements AfterViewInit {
     this.form.reset();
     this.close();
   }
-
-  logs() {
-    console.log(this._documento);
-  }
 }
