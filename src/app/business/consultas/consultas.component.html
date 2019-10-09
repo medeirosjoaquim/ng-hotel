@@ -4,6 +4,56 @@
       <span class="mb-0 h4">Consultas</span>
     </nav>
     <div class="consultas--results">
+      <div class="row filters">
+          <div class="custom-control custom-checkbox">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="_filtrar"
+                [(ngModel)]="filtrar"
+                (change)="filterChange()"
+              >
+              <label
+                class="custom-control-label h6"
+                for="_filtrar"
+              >Filtrar?</label>
+            </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="filtrarPessoas"
+            id="pessoasPresentes"
+            value="pessoasPresentes"
+            [(ngModel)]="filterBy"
+            checked
+            (change)="filterChange()"
+          >
+          <label
+            class="form-check-label"
+            for="pessoasPresentes"
+          >
+            Pessoas presentes
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="filtrarPessoas"
+            id="pessoasAusentes"
+            value="pessoasAusentes"
+            [(ngModel)]="filterBy"
+            (change)="filterChange()"
+          >
+          <label
+            class="form-check-label"
+            for="pessoasAusentes"
+          >
+            Pessoas que já deixaram o hotel
+          </label>
+        </div>
+      </div>
       <ng-container>
         <div class="row  header">
           <div class="col-4">Nome</div>

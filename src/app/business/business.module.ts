@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BoardComponent } from './board/board.component';
 import { CheckinComponent } from './checkin/checkin.component';
 import { ConsultasComponent } from './consultas/consultas.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PessoaComponent } from './pessoa/pessoa.component';
 import { NgxMaskModule } from 'ngx-mask';
@@ -24,6 +24,7 @@ import { NoopAnimationsModule} from '@angular/platform-browser/animations';
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
     NoopAnimationsModule,
+    FormsModule,
     NgxMaskModule.forRoot()
 
   ],

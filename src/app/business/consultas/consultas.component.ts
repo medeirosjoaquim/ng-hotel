@@ -3,6 +3,7 @@ import { DataService } from 'src/app/data.service';
 import { ICheckin } from '../models/ICheckin.model';
 import moment from 'moment';
 
+
 @Component({
   selector: 'app-consultas',
   templateUrl: './consultas.component.html',
@@ -11,6 +12,8 @@ import moment from 'moment';
 export class ConsultasComponent implements OnInit {
   checkinList: ICheckin[];
   constructor(private data: DataService) { }
+  filtrar = false;
+  filterBy = 'pessoasPresentes';
 
   ngOnInit() {
     this.data.currentCheckin.subscribe(result => this.checkinList = result);
@@ -31,4 +34,17 @@ export class ConsultasComponent implements OnInit {
     return moment(time).format('HH:MM');
   }
 
+  filterChange() {
+    if (this.filtrar) {
+      switch (this.filterBy) {
+
+        case 'pessoasPresentes':
+          console.log('presentes');
+          break;
+        case 'pessoasAusentes':
+          console.log('ausentes');
+          break;
+      }
+    }
+  }
 }
