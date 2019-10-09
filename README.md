@@ -30,7 +30,11 @@ como desafio para vaga de Frontend na Sênior Sistemas em Outubro de 2019.
 
 ## Rodar
 
+Inicie o aplicativo com um dos comandos abaixo:
 ```npm start``` ou ```ng start```
+
+Após a compilação, o App estará disponível para acesso
+pelo navegador em localhost:4200
 
 ## Produção
 
