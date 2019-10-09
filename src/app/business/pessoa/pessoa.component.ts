@@ -15,7 +15,7 @@ export class PessoaComponent implements AfterViewInit {
   private modalWindow: any;
   form: FormGroup;
 
-  constructor(private el: ElementRef, private fb: FormBuilder) {
+  constructor(private el: ElementRef, private fb: FormBuilder, private data: DataService) {
     this.element = el.nativeElement;
     this.form = this.fb.group({
       nome: ['', Validators.required],
@@ -51,6 +51,21 @@ export class PessoaComponent implements AfterViewInit {
   get _fone() { return this.form.get('fone'); }
 
   submitPessoaForm() {
-    //
+    /* if (this.form.invalid) {
+      return;
+    } */
+    console.log('persist data pessoa');
+    const persist: IPessoa = {
+      nome: this._nome.value,
+      documento: this._documento.value,
+      fone:  this._fone.value,
+    };
+    this.data.addPessoa(persist);
+    this.form.reset();
+    this.close();
+  }
+
+  logs() {
+    console.log(this._documento);
   }
 }

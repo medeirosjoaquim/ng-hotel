@@ -11,7 +11,9 @@
     >[ fechar ]</span>
   </nav>
   <div class="pessoa-modal--form">
-    <form [formGroup]="form">
+    <form #aaa
+    [formGroup]="form"
+    (submit)="submitPessoaForm()">
       <div class="row">
         <!-- Nome -->
         <div class="form-group col-6 ">
@@ -51,6 +53,9 @@
             <div *ngIf="_documento.hasError('required')">
               Informe o documento para cadastro
             </div>
+            <div *ngIf="_documento.hasError('Mask error')">
+              Preencha todos os caracteres
+            </div>
           </div>
         </div>
         <!--  -->
@@ -65,7 +70,7 @@
           <input
             formControlName="fone"
             class="form-control last-input"
-            mask="000-000-0000"
+            mask="000-000-0000" [validation]="false"
           >
           <div
             *ngIf="_fone.touched && _fone.invalid"
@@ -73,6 +78,9 @@
           >
             <div *ngIf="_fone.hasError('required')">
               Informe o telefone para cadastro
+            </div>
+            <div *ngIf="_documento.hasError('Mask error')">
+              Preencha todos os caracteres
             </div>
           </div>
         </div>
@@ -84,5 +92,6 @@
           [disabled]="form.invalid"
         >Cadastrar</button>
     </form>
+    <button (click)="logs()">debug</button>
   </div>
 </div>
