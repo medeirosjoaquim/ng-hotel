@@ -1,9 +1,7 @@
 # Hotel Senior
 
-<p align="center">
 [![Build Status](https://travis-ci.com/medeirosjoaquim/hotel-senior.svg?token=Nfdt9KzNxomwmeF6q4cR&branch=master)](https://travis-ci.com/medeirosjoaquim/hotel-senior)
 ![Repo Size](https://img.shields.io/github/repo-size/medeirosjoaquim/hotel-senior?style=flat-square)
-</p>
 
 <p align="center">
   <a href="#o-que-é">O que é</a> •
