@@ -1,3 +1,5 @@
+#Nova atualização iniciada em 18/11/2019;
+
 # Hotel Senior
 
 [![Build Status](https://travis-ci.com/medeirosjoaquim/hotel-senior.svg?token=Nfdt9KzNxomwmeF6q4cR&branch=master)](https://travis-ci.com/medeirosjoaquim/hotel-senior)
